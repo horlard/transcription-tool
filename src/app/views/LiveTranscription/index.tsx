@@ -1,6 +1,4 @@
-import SpeechRecognition, {
-  useSpeechRecognition,
-} from "react-speech-recognition";
+import SpeechRecognition from "react-speech-recognition";
 
 import CreateTranscript from "./components/CreateTranscript";
 import TranscriptName from "./components/TranscriptName";

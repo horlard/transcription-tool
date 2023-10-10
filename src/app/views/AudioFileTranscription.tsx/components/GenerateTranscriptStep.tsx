@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import tw, { styled } from "twin.macro";
-import { TypeAnimation } from "react-type-animation";
 import Typed from "react-typed";
 
 import Card from "../../../components/Card";

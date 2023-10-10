@@ -12,12 +12,7 @@ interface Props {
 }
 
 export default function GenerateTranscriptStep(props: Props) {
-  const {
-    transcript,
-    listening,
-    resetTranscript,
-    browserSupportsSpeechRecognition,
-  } = useSpeechRecognition();
+  const { transcript, listening, resetTranscript } = useSpeechRecognition();
 
   const { transcriptName } = props;
 

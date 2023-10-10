@@ -1,15 +1,9 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import tw, { css, styled } from "twin.macro";
 
 import appLinks from "../../app/constants/appLinks";
 
 export default function DashboardSideNav() {
-  // const profile = useProfile();
-
-  const location = useLocation();
-
-  // if (!profile) return null;
-
   return (
     <Container>
       <NavigationSection>
