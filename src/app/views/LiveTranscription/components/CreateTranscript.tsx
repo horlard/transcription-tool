@@ -36,8 +36,8 @@ const Container = styled.div`
   }
 
   > button {
-    background: #12a633;
-    border: 1px solid #12a633;
+    background: #252dc4e8;
+    border: 1px solid #252dc4e8;
     padding: 10px 16px;
     border-radius: 5px;
     color: #fff;
@@ -47,7 +47,7 @@ const Container = styled.div`
     justify-content: center;
 
     &:hover {
-      background: #077e21;
+      background: #252dc4;
     }
   }
 `;

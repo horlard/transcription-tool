@@ -39,8 +39,9 @@ const Container = styled.nav`
   a {
     display: flex;
     align-items: center;
+    gap: 10px;
     img {
-      width: 122px;
+      width: 71px;
       height: 58px;
     }
 

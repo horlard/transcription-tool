@@ -42,8 +42,8 @@ export default function SignUp() {
 
   return (
     <>
-      <div tw="flex justify-center items-center">
-        <img src={Logo} alt="lasu" tw="w-[90px] h-[50px]" />
+      <div tw="flex justify-center items-center gap-[20px]">
+        <img src={Logo} alt="lasu" tw="w-[70px] h-[50px]" />
         <div tw="text-center font-bold text-[1.4rem]">
           <p>Designed By Bisiriyu Saulih Oladipupo</p>
           <p>Department of Electronic and Computer Engineering</p>
@@ -116,7 +116,7 @@ const Wrapper = styled.div`
   justify-content: center;
 
   > div {
-    padding-top: 188px;
+    padding-top: 150px;
 
     > .container {
       h2 {
@@ -136,8 +136,8 @@ const Wrapper = styled.div`
         gap: 20px;
 
         > button {
-          background: #12a633;
-          border: 1px solid #12a633;
+          background: #252dc4e8;
+          border: 1px solid #252dc4e8;
           padding: 10px 16px;
           border-radius: 5px;
           color: #fff;
@@ -147,7 +147,7 @@ const Wrapper = styled.div`
           justify-content: center;
 
           &:hover {
-            background: #077e21;
+            background: #252dc4;
           }
 
           &:disabled {
@@ -176,7 +176,6 @@ const Wrapper = styled.div`
             top: 28px;
             right: 3px;
             z-index: 999;
-            background: #fff;
             padding: 11px;
             font-weight: 500;
             font-size: 11px;

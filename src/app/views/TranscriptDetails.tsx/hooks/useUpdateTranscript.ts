@@ -11,12 +11,13 @@ type updateParams = {
 };
 
 export default function useUpdateTranscript() {
-  const { isLoading, mutate } = useMutation((data: updateParams) =>
+  const { isLoading, mutate, data } = useMutation((data: updateParams) =>
     updateTranscript(data.id, data.data)
   );
 
   return {
     isLoading,
     updateTranscript: mutate,
+    data: data,
   };
 }

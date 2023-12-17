@@ -67,21 +67,30 @@ export default function TransactionDetails() {
             <textarea value={transcript} onChange={onChangeHandler} />
             <div className="actions">
               <div>
-                <button onClick={exportTranscript}>Export</button>
+                <button
+                  onClick={exportTranscript}
+                  tw="bg-[#252dc4e8] border-[#252dc4e8]"
+                >
+                  Export
+                </button>
               </div>
               <div>
                 <button
                   disabled={transcript === data?.text || updateLoading}
                   onClick={() =>
-                    updateTranscript({
-                      id: id as string,
-                      data: {
-                        name: data?.name as string,
-                        text: transcript as string,
-                        type: data?.type as "live" | "upload",
+                    updateTranscript(
+                      {
+                        id: id as string,
+                        data: {
+                          name: data?.name as string,
+                          text: transcript as string,
+                          type: data?.type as "live" | "upload",
+                        },
                       },
-                    })
+                      { onSuccess: () => window.location.reload() }
+                    )
                   }
+                  tw="bg-[#e94a3f] border-[#e94a3f]"
                 >
                   {updateLoading ? <Loader size="18" color="#eee" /> : "Save"}
                 </button>
@@ -133,11 +142,6 @@ const Container = styled.div`
       border-radius: 5px;
       color: #fff;
       font-size: 14px;
-
-      &:nth-child(1) {
-        background: #12a633;
-        border: 1px solid #12a633;
-      }
 
       &:nth-child(2) {
         background: #e94a3f;

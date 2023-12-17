@@ -109,14 +109,16 @@ const Container = styled.div`
     gap: 5px;
 
     button {
-      background: #12a633;
-      border: 1px solid #12a633;
+      background: #252dc4e8;
+      border: 1px solid #252dc4e8;
       padding: 5px 10px;
       border-radius: 5px;
       color: #fff;
+      display: flex;
+      justify-content: center;
 
       &:hover {
-        background: #077e21;
+        background: #252dc4;
       }
 
       &:disabled {

@@ -18,7 +18,7 @@ export default function CreateTranscript(props: Props) {
 
   return (
     <>
-      <h1 tw="text-[2.8rem] font-semibold mb-[20px]">
+      <h1 tw="text-[2.8rem] mobile:text-[2.3rem] font-semibold mb-[20px]">
         What would you like to name your transcript?
       </h1>
 
@@ -66,8 +66,8 @@ const Container = styled.div`
   }
 
   > button {
-    background: #12a633;
-    border: 1px solid #12a633;
+    background: #252dc4e8;
+    border: 1px solid #252dc4e8;
     padding: 10px 16px;
     border-radius: 5px;
     color: #fff;
@@ -77,7 +77,7 @@ const Container = styled.div`
     justify-content: center;
 
     &:hover {
-      background: #077e21;
+      background: #252dc4;
     }
 
     &:disabled {

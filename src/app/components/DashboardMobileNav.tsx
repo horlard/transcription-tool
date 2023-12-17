@@ -25,7 +25,7 @@ const Container = styled.nav`
 `;
 
 const Link = styled(NavLink)`
-  ${tw`w-[89.75px] h-full flex-shrink-0 flex-grow flex flex-col items-center justify-center text-[1.2rem] text-black p-[10px]`};
+  ${tw`w-[89.75px] h-full flex-shrink-0 flex-grow flex flex-col items-center justify-center text-[1.2rem] text-black p-[9px]`};
 
   svg {
     ${tw`w-[24px] h-[24px] mb-[4px]`};

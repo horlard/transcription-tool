@@ -8,6 +8,7 @@ import useLoginUser from "./hooks/useLoginUser";
 import Loader from "../../components/Loader";
 import { AxiosResponse } from "axios";
 import { loginResponse } from "../../api/auth";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [showText, setShowText] = useState<boolean>(false);
@@ -34,8 +35,8 @@ export default function Login() {
 
   return (
     <>
-      <div tw="flex justify-center items-center">
-        <img src={Logo} alt="lasu" tw="w-[90px] h-[50px]" />
+      <div tw="flex justify-center items-center gap-[20px]">
+        <img src={Logo} alt="lasu" tw="w-[70px] h-[50px]" />
         <div tw="text-center font-bold text-[1.4rem]">
           <p>Designed By Bisiriyu Saulih Oladipupo</p>
           <p>Department of Electronic and Computer Engineering</p>
@@ -73,6 +74,9 @@ export default function Login() {
                 >
                   {showText ? <EyeOff /> : <Eye />}
                 </button>
+                <span>
+                  Don't have an account? <Link to="/">Sign Up</Link>
+                </span>
               </div>
 
               <button
@@ -111,7 +115,7 @@ const Wrapper = styled.div`
   justify-content: center;
 
   > div {
-    padding-top: 225px;
+    padding-top: 150px;
 
     > .container {
       h2 {
@@ -131,8 +135,8 @@ const Wrapper = styled.div`
         gap: 20px;
 
         > button {
-          background: #12a633;
-          border: 1px solid #12a633;
+          background: #252dc4e8;
+          border: 1px solid #252dc4e8;
           padding: 10px 16px;
           border-radius: 5px;
           color: #fff;
@@ -142,7 +146,7 @@ const Wrapper = styled.div`
           justify-content: center;
 
           &:hover {
-            background: #077e21;
+            background: #252dc4;
           }
 
           &:disabled {
@@ -156,12 +160,21 @@ const Wrapper = styled.div`
           gap: 5px;
           position: relative;
 
+          span {
+            color: #594d4d;
+            font-size: 12px;
+
+            a {
+              color: #12a633;
+              text-decoration: underline;
+            }
+          }
+
           button {
             position: absolute;
             top: 28px;
             right: 3px;
             z-index: 999;
-            background: #fff;
             padding: 11px;
             font-weight: 500;
             font-size: 11px;

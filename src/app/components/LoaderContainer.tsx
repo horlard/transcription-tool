@@ -48,7 +48,7 @@ export default function LoaderContainer(props: React.PropsWithChildren<Props>) {
 
       {error && (
         <div tw="text-[2.4rem] text-center">
-          {errorMessage} <br />{" "}
+          {`${errorMessage} due to session time out`} <br />{" "}
           <button
             tw="text-[1.4rem] text-[#12a633]"
             onClick={() => navigate("/login")}

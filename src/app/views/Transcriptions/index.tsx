@@ -11,7 +11,10 @@ import { ReactComponent as Document } from "../../assets/icons/document.svg";
 import EmptyState from "./components/EmptyState";
 
 export default function Transcriptions() {
-  const { isLoading, error, getTranscripts, data } = useGetTranscripts();
+  const { isLoading, error, getTranscripts, data, status } =
+    useGetTranscripts();
+
+  console.log(status);
 
   const navigate = useNavigate();
 
