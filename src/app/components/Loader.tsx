@@ -12,7 +12,7 @@ export default function Loader(props: Props) {
 }
 
 const LoaderBox = styled.div<LoaderBoxProps>`
-  ${tw`w-[40px] h-[40px] border-2 border-[#12A633] rounded-full animate-spin-fast`};
+  ${tw`w-[40px] h-[40px] border-2 border-[#252dc4e8] rounded-full animate-spin-fast`};
 
   ${(props) =>
     props.color &&
