@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { styled } from "twin.macro";
+import tw, { styled } from "twin.macro";
 import Logo from "../../assets/images/lasu_logo.png";
 
 import { ReactComponent as Eye } from "../../assets/icons/eye.svg";
@@ -118,6 +118,8 @@ const Wrapper = styled.div`
     padding-top: 150px;
 
     > .container {
+      width: 450px;
+      ${tw`mobile:w-[395px]`}
       h2 {
         font-size: 25px;
         font-weight: 600;
@@ -190,7 +192,7 @@ const Wrapper = styled.div`
         }
 
         input {
-          width: 400px;
+          width: 100%;
           border: 1px solid rgba(91, 97, 110, 0.2);
           border-radius: 8px;
           padding: 10px;
