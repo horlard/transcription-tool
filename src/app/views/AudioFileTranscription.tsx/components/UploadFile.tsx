@@ -19,7 +19,7 @@ export default function UploadFile(props: Props) {
   const onSubmit = () => {
     transcribeAudio(formData as FormData, {
       onSuccess(data) {
-        onContinue(data.data.text);
+        onContinue(data.data.results.channels[0].alternatives[0].transcript);
       },
     });
   };
@@ -34,10 +34,10 @@ export default function UploadFile(props: Props) {
 
       const data = new FormData();
       data.append("file", file);
-      data.append("model", "whisper-1");
-      data.append("language", "en");
       setFormData(data);
       setSelectedFile(e.target.files[0]);
+
+      console.log(e.target.files[0]);
 
       // check if the size is less than 25MB
       if (file.size > 25 * 1024 * 1024) {
