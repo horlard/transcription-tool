@@ -78,17 +78,14 @@ export default function TransactionDetails() {
                 <button
                   disabled={transcript === data?.text || updateLoading}
                   onClick={() =>
-                    updateTranscript(
-                      {
-                        id: id as string,
-                        data: {
-                          name: data?.name as string,
-                          text: transcript as string,
-                          type: data?.type as "live" | "upload",
-                        },
+                    updateTranscript({
+                      id: id as string,
+                      data: {
+                        name: data?.name as string,
+                        text: transcript as string,
+                        type: data?.type as "live" | "upload",
                       },
-                      { onSuccess: () => window.location.reload() }
-                    )
+                    })
                   }
                   tw="bg-[#e94a3f] border-[#e94a3f]"
                 >

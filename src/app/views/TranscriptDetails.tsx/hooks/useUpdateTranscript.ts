@@ -1,4 +1,4 @@
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { updateTranscript } from "../../../api/transcripts";
 
 type updateParams = {
@@ -11,8 +11,15 @@ type updateParams = {
 };
 
 export default function useUpdateTranscript() {
-  const { isLoading, mutate, data } = useMutation((data: updateParams) =>
-    updateTranscript(data.id, data.data)
+  const queryClient = useQueryClient();
+  const { isLoading, mutate, data } = useMutation(
+    (data: updateParams) => updateTranscript(data.id, data.data),
+    {
+      onSuccess: () =>
+        queryClient.invalidateQueries({
+          queryKey: ["getTranscript"],
+        }),
+    }
   );
 
   return {
